@@ -6,29 +6,30 @@ import com.revature.dto.LoginDTO;
 import com.revature.dto.MessageDTO;
 import com.revature.model.User;
 //import com.revature.service.LoginService;
+import com.revature.service.LoginService;
 
 import io.javalin.Javalin;
 import io.javalin.http.Handler;
 
 public class LoginController implements Controller {
 
-//	private LoginService loginService;
-//	
-//	public LoginController() {
-//		this.loginService = new LoginService();
-//	}
-//	
+	private LoginService loginService;
+	
+	public LoginController() {
+		this.loginService = new LoginService();
+	}
+	
 	private Handler loginHandler = (ctx) -> {
 		LoginDTO loginDto = ctx.bodyAsClass(LoginDTO.class);
 		
 		System.out.println(loginDto.getUsername());
 		System.out.println(loginDto.getPassword());
-	//	User user = loginService.login(loginDto);
+		User user = loginService.login(loginDto);
 		
-		//HttpSession httpSession = ctx.req.getSession();
-		//httpSession.setAttribute("currentUser", ser);
+		HttpSession httpSession = ctx.req.getSession();
+		httpSession.setAttribute("currentUser", user);
 		
-	//	ctx.json(user);
+		ctx.json(user);
 		ctx.status(200);
 	};
 //	
