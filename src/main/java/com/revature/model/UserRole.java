@@ -23,43 +23,44 @@ public class UserRole {
 	@Column(name = "userRole")
 	private String role;
 	
-	@OneToOne
-	@JoinColumn(name = "username") // improvement: could use (cascade = {})	// optional name for foreign key
-	// @JsonManagedReference
-	private User user;
-//	@OneToMany(mappedBy = "ship", cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE })
 
 	public UserRole() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public UserRole(String role, User user) {
+
+	public UserRole(String role) {
 		super();
 		this.role = role;
-		this.user = user;
 	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 
 	public String getRole() {
 		return role;
 	}
 
+
 	public void setRole(String role) {
 		this.role = role;
 	}
 
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(role, user);
+		return Objects.hash(id, role);
 	}
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -70,13 +71,14 @@ public class UserRole {
 		if (getClass() != obj.getClass())
 			return false;
 		UserRole other = (UserRole) obj;
-		return Objects.equals(role, other.role) && Objects.equals(user, other.user);
+		return id == other.id && Objects.equals(role, other.role);
 	}
+
 
 	@Override
 	public String toString() {
-		return "UserRole [role=" + role + ", user=" + user + "]";
+		return "UserRole [id=" + id + ", role=" + role + "]";
 	}
-	
+
 	
 }

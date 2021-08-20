@@ -26,9 +26,8 @@ public class ReimbursementStatus {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ReimbursementStatus(int reimbId, String reimbStatus) {
+	public ReimbursementStatus(String reimbStatus) {
 		super();
-		this.id = reimbId;
 		this.reimbStatus = reimbStatus;
 	}
 

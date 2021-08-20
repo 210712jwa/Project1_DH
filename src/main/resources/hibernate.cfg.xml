@@ -22,13 +22,11 @@
 		<!-- 3. validate - validate existing tables against current class mappings. If something is not consistent between the two, 
 		the application will not work -->
 		<!-- 4. create-drop - same as create, but will drop all tables once SessionFactory is closed (when our application ends) -->
-		<property name="hbm2ddl.auto">update</property>
+		<property name="hbm2ddl.auto">create</property>
 		
 		<!-- Specify our entity/class mappings here -->
-		<mapping class="com.revature.model.Ship"></mapping>
-		<mapping class="com.revature.model.Pirate"></mapping>
-		<mapping class="com.revature.model.User"></mapping>
 		<mapping class="com.revature.model.UserRole"></mapping>
+		<mapping class="com.revature.model.User"></mapping>
 		<mapping class="com.revature.model.Reimbursement"></mapping>
 		<mapping class="com.revature.model.ReimbursementStatus"></mapping>
 		<mapping class="com.revature.model.ReimbursementType"></mapping>

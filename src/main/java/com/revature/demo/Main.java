@@ -6,8 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-import com.revature.model.Pirate;
-import com.revature.model.Ship;
+
 import com.revature.model.User;
 import com.revature.util.SessionFactorySingleton;
 

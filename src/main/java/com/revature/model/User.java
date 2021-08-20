@@ -117,6 +117,12 @@ public class User {
 		return "User [id=" + id + ", username=" + username + ", password=" + password + ", fName=" + fName + ", lName="
 				+ lName + ", email=" + email + "]";
 	}
+
+
+	public void setUserRole(UserRole role) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 
