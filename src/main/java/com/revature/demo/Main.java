@@ -38,7 +38,7 @@ public class Main {
 		Transaction tx = session.beginTransaction();
 		
 	
-		User newUser = new User("username","password","david", "huynh", "david@revature.net");
+		User newUser = new User("username","password","david", "huynh", "david@revature.net", "admin");
 		session.persist(newUser);
 		
 		tx.commit();

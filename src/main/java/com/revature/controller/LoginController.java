@@ -22,8 +22,8 @@ public class LoginController implements Controller {
 	private Handler loginHandler = (ctx) -> {
 		LoginDTO loginDto = ctx.bodyAsClass(LoginDTO.class);
 		
-		System.out.println(loginDto.getUsername());
-		System.out.println(loginDto.getPassword());
+		//System.out.println(loginDto.getUsername());
+		//System.out.println(loginDto.getPassword());
 		User user = loginService.login(loginDto);
 		
 		HttpSession httpSession = ctx.req.getSession();
@@ -32,23 +32,23 @@ public class LoginController implements Controller {
 		ctx.json(user);
 		ctx.status(200);
 	};
-//	
-//	private Handler currentUserHandler = (ctx) -> {
-//		HttpSession httpSession = ctx.req.getSession();
-//		if (httpSession.getAttribute("currentUser") == null) {
-//			ctx.json(new MessageDTO("User is currently not logged in"));
-//			ctx.status(401);
-//		} else {
-//			User user = (User) httpSession.getAttribute("currentUser");
-//			ctx.json(user);
-//			ctx.status(200);
-//		}
-//	};
+	
+	private Handler currentUserHandler = (ctx) -> {
+		HttpSession httpSession = ctx.req.getSession();
+		if (httpSession.getAttribute("currentUser") == null) {
+			ctx.json(new MessageDTO("User is currently not logged in"));
+			ctx.status(401);
+		} else {
+			User user = (User) httpSession.getAttribute("currentUser");
+			ctx.json(user);
+			ctx.status(200);
+		}
+	};
 //	
 	@Override
 	public void mapEndpoints(Javalin app) {
 		app.post("/login", loginHandler);
-		//app.get("currentuser", currentUserHandler);
+		app.get("currentuser", currentUserHandler);
 	}
 
 }

@@ -1118,3 +1118,584 @@ java.lang.IllegalArgumentException: Parameter specified as non-null is null: met
 20 Aug 2021 - 15:39:04.765 [main] ERROR io.javalin.Javalin - Failed to start Javalin
 20 Aug 2021 - 15:39:04.765 [main] INFO  io.javalin.Javalin - Stopping Javalin ...
 20 Aug 2021 - 15:39:04.769 [main] INFO  io.javalin.Javalin - Javalin has stopped
+20 Aug 2021 - 15:39:09.818 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+20 Aug 2021 - 15:39:09.832 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @513ms to org.eclipse.jetty.util.log.Slf4jLog
+20 Aug 2021 - 15:39:09.833 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+20 Aug 2021 - 15:39:10.219 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7000/
+20 Aug 2021 - 15:39:10.219 [main] INFO  io.javalin.Javalin - Javalin started in 387ms \o/
+20 Aug 2021 - 15:39:13.084 [qtp99451533-24] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 15:39:13.534 [qtp99451533-24] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 15:39:13.643 [qtp99451533-24] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 15:39:13.647 [qtp99451533-24] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 15:39:13.647 [qtp99451533-24] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 15:39:13.647 [qtp99451533-24] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 15:39:13.651 [qtp99451533-24] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 15:39:14.044 [qtp99451533-24] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 15:39:14.873 [qtp99451533-24] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3854c805] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 15:39:15.190 [qtp99451533-24] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 15:40:36.300 [qtp99451533-12] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is You provided incorrect credentials when attempting to log in
+20 Aug 2021 - 20:19:30.868 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 20:19:31.407 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 20:19:31.720 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 20:19:31.724 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 20:19:31.725 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 20:19:31.725 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 20:19:31.728 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 20:19:31.988 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 20:19:32.792 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3b0ca5e1] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:19:32.974 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 20:20:24.426 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 20:20:40.015 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 20:20:40.416 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 20:20:40.700 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 20:20:40.703 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 20:20:40.703 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 20:20:40.704 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 20:20:40.706 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 20:20:40.962 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 20:20:41.699 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@17ca8b92] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:20:42.110 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5bb3131b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:20:42.664 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 20:26:40.227 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 20:26:40.638 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 20:26:40.925 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 20:26:40.928 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 20:26:40.928 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 20:26:40.928 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 20:26:40.931 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 20:26:41.201 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 20:26:41.938 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@17ca8b92] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:26:42.373 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5bb3131b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:26:42.927 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 20:28:42.470 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 20:28:42.863 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 20:28:43.145 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 20:28:43.148 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 20:28:43.148 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 20:28:43.149 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 20:28:43.152 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 20:28:43.410 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 20:28:44.149 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@17ca8b92] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:28:44.574 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5bb3131b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:28:45.145 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 20:28:55.777 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 20:28:56.171 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 20:28:56.457 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 20:28:56.461 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 20:28:56.461 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 20:28:56.461 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 20:28:56.465 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 20:28:56.733 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 20:28:57.470 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@17ca8b92] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:28:57.899 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5bb3131b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:28:58.469 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 20:29:09.102 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+20 Aug 2021 - 20:29:09.117 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @461ms to org.eclipse.jetty.util.log.Slf4jLog
+20 Aug 2021 - 20:29:09.118 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+20 Aug 2021 - 20:29:09.312 [main] ERROR io.javalin.Javalin - Failed to start Javalin
+20 Aug 2021 - 20:29:09.313 [main] INFO  io.javalin.Javalin - Stopping Javalin ...
+20 Aug 2021 - 20:29:09.317 [main] INFO  io.javalin.Javalin - Javalin has stopped
+20 Aug 2021 - 20:29:14.291 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+20 Aug 2021 - 20:29:14.303 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @464ms to org.eclipse.jetty.util.log.Slf4jLog
+20 Aug 2021 - 20:29:14.304 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+20 Aug 2021 - 20:29:14.683 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7000/
+20 Aug 2021 - 20:29:14.683 [main] INFO  io.javalin.Javalin - Javalin started in 379ms \o/
+20 Aug 2021 - 20:29:32.396 [qtp84739718-15] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 20:29:32.854 [qtp84739718-15] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 20:29:32.968 [qtp84739718-15] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 20:29:32.973 [qtp84739718-15] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 20:29:32.973 [qtp84739718-15] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 20:29:32.973 [qtp84739718-15] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 20:29:32.976 [qtp84739718-15] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 20:29:33.244 [qtp84739718-15] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 20:29:33.975 [qtp84739718-15] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@296c311e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:29:34.408 [qtp84739718-15] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1e859c11] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:29:34.982 [qtp84739718-15] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 20:29:35.279 [qtp84739718-15] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is You provided incorrect credentials when attempting to log in
+20 Aug 2021 - 20:34:46.769 [qtp84739718-13] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is You provided incorrect credentials when attempting to log in
+20 Aug 2021 - 20:34:47.664 [qtp84739718-18] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is You provided incorrect credentials when attempting to log in
+20 Aug 2021 - 20:39:02.805 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+20 Aug 2021 - 20:39:02.817 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @473ms to org.eclipse.jetty.util.log.Slf4jLog
+20 Aug 2021 - 20:39:02.818 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+20 Aug 2021 - 20:39:03.176 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7000/
+20 Aug 2021 - 20:39:03.176 [main] INFO  io.javalin.Javalin - Javalin started in 359ms \o/
+20 Aug 2021 - 20:41:31.545 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+20 Aug 2021 - 20:41:31.556 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @462ms to org.eclipse.jetty.util.log.Slf4jLog
+20 Aug 2021 - 20:41:31.557 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+20 Aug 2021 - 20:41:31.918 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7000/
+20 Aug 2021 - 20:41:31.918 [main] INFO  io.javalin.Javalin - Javalin started in 361ms \o/
+20 Aug 2021 - 20:41:48.994 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 20:41:49.409 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 20:41:49.708 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 20:41:49.712 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 20:41:49.712 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 20:41:49.712 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 20:41:49.715 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 20:41:49.978 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 20:41:50.743 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@69eb86b4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:41:50.931 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 20:42:15.829 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 20:42:16.227 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 20:42:16.511 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 20:42:16.514 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 20:42:16.514 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 20:42:16.515 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 20:42:16.517 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 20:42:16.776 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 20:42:17.513 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@69eb86b4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:42:17.701 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 20:42:31.390 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 20:42:31.791 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 20:42:32.073 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 20:42:32.076 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 20:42:32.077 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 20:42:32.077 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 20:42:32.080 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 20:42:32.341 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 20:42:33.071 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@69eb86b4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:42:33.250 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 20:42:42.018 [qtp84739718-18] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 20:42:42.444 [qtp84739718-18] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 20:42:42.549 [qtp84739718-18] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 20:42:42.553 [qtp84739718-18] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 20:42:42.553 [qtp84739718-18] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 20:42:42.554 [qtp84739718-18] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 20:42:42.557 [qtp84739718-18] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 20:42:42.822 [qtp84739718-18] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 20:42:43.564 [qtp84739718-18] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@33fb2bf9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:42:43.750 [qtp84739718-18] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 20:47:14.804 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 20:47:15.199 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 20:47:15.482 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 20:47:15.485 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 20:47:15.485 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 20:47:15.486 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 20:47:15.489 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 20:47:15.751 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 20:47:16.475 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@69eb86b4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:47:16.660 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 20:47:30.320 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 20:47:30.727 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 20:47:31.014 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 20:47:31.018 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 20:47:31.018 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 20:47:31.018 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 20:47:31.022 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 20:47:31.279 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 20:47:32.009 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1ec7d8b3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:47:32.440 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@585ac855] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:47:33.001 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 20:47:54.352 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 20:47:54.789 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 20:47:55.071 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 20:47:55.074 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 20:47:55.075 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 20:47:55.075 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 20:47:55.078 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 20:47:55.343 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 20:47:56.066 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1ec7d8b3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:47:56.487 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@585ac855] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:47:57.061 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 20:48:04.558 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 20:48:04.958 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 20:48:05.239 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 20:48:05.242 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 20:48:05.242 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 20:48:05.243 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 20:48:05.245 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 20:48:05.505 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 20:48:06.230 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1ec7d8b3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:48:06.661 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@585ac855] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:48:07.250 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 20:48:34.586 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+20 Aug 2021 - 20:48:34.598 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @451ms to org.eclipse.jetty.util.log.Slf4jLog
+20 Aug 2021 - 20:48:34.600 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+20 Aug 2021 - 20:48:34.974 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7000/
+20 Aug 2021 - 20:48:34.974 [main] INFO  io.javalin.Javalin - Javalin started in 375ms \o/
+20 Aug 2021 - 20:48:55.552 [qtp84739718-17] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 20:48:56.003 [qtp84739718-17] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 20:48:56.110 [qtp84739718-17] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 20:48:56.113 [qtp84739718-17] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 20:48:56.114 [qtp84739718-17] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 20:48:56.114 [qtp84739718-17] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 20:48:56.118 [qtp84739718-17] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 20:48:56.403 [qtp84739718-17] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 20:48:57.144 [qtp84739718-17] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3c6479] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 20:48:57.327 [qtp84739718-17] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 20:48:57.625 [qtp84739718-17] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is You provided incorrect credentials when attempting to log in
+20 Aug 2021 - 20:50:27.955 [qtp84739718-14] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is You provided incorrect credentials when attempting to log in
+20 Aug 2021 - 20:50:38.194 [qtp84739718-14] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is You provided incorrect credentials when attempting to log in
+20 Aug 2021 - 20:54:02.063 [qtp84739718-25] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is You provided incorrect credentials when attempting to log in
+20 Aug 2021 - 20:57:34.875 [qtp84739718-15] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is You provided incorrect credentials when attempting to log in
+20 Aug 2021 - 23:08:14.292 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+20 Aug 2021 - 23:08:14.306 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @466ms to org.eclipse.jetty.util.log.Slf4jLog
+20 Aug 2021 - 23:08:14.308 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+20 Aug 2021 - 23:08:14.691 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7000/
+20 Aug 2021 - 23:08:14.691 [main] INFO  io.javalin.Javalin - Javalin started in 384ms \o/
+20 Aug 2021 - 23:16:44.256 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+20 Aug 2021 - 23:16:44.268 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @476ms to org.eclipse.jetty.util.log.Slf4jLog
+20 Aug 2021 - 23:16:44.270 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+20 Aug 2021 - 23:16:44.642 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7000/
+20 Aug 2021 - 23:16:44.642 [main] INFO  io.javalin.Javalin - Javalin started in 373ms \o/
+20 Aug 2021 - 23:23:44.506 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+20 Aug 2021 - 23:23:44.518 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @477ms to org.eclipse.jetty.util.log.Slf4jLog
+20 Aug 2021 - 23:23:44.519 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+20 Aug 2021 - 23:23:44.890 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7000/
+20 Aug 2021 - 23:23:44.891 [main] INFO  io.javalin.Javalin - Javalin started in 373ms \o/
+20 Aug 2021 - 23:23:51.518 [qtp84739718-17] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 23:23:51.955 [qtp84739718-17] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 23:23:52.058 [qtp84739718-17] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 23:23:52.063 [qtp84739718-17] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 23:23:52.063 [qtp84739718-17] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 23:23:52.063 [qtp84739718-17] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 23:23:52.067 [qtp84739718-17] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 23:23:52.360 [qtp84739718-17] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 23:23:53.020 [qtp84739718-17] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: com.revature.model.Reimbursement (class must be instantiated by Interceptor)
+20 Aug 2021 - 23:23:53.147 [qtp84739718-17] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@53543201] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 23:23:53.336 [qtp84739718-17] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 23:23:53.345 [qtp84739718-17] WARN  io.javalin.Javalin - Uncaught exception
+org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [reimbRecipe] in table [reimbursement]; found [varchar (Types#VARCHAR)], but expecting [integer (Types#INTEGER)]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateColumnType(AbstractSchemaValidator.java:159)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:143)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:42)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:89)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:68)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:200)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:81)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:327)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:728)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:744)
+	at com.revature.util.SessionFactorySingleton.getSessionFactory(SessionFactorySingleton.java:19)
+	at com.revature.dao.UserDAO.getUserByUsernameAndPassword(UserDAO.java:15)
+	at com.revature.service.LoginService.login(LoginService.java:30)
+	at com.revature.controller.LoginController.lambda$0(LoginController.java:27)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:128)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:136)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:388)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:633)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:380)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(Thread.java:748)
+20 Aug 2021 - 23:23:58.949 [qtp84739718-14] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 23:23:58.950 [qtp84739718-14] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 23:23:58.950 [qtp84739718-14] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 23:23:58.950 [qtp84739718-14] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 23:23:58.951 [qtp84739718-14] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 23:23:59.136 [qtp84739718-14] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 23:23:59.239 [qtp84739718-14] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: com.revature.model.Reimbursement (class must be instantiated by Interceptor)
+20 Aug 2021 - 23:23:59.284 [qtp84739718-14] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4f5cafa7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 23:23:59.468 [qtp84739718-14] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 23:23:59.473 [qtp84739718-14] WARN  io.javalin.Javalin - Uncaught exception
+org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [reimbRecipe] in table [reimbursement]; found [varchar (Types#VARCHAR)], but expecting [integer (Types#INTEGER)]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateColumnType(AbstractSchemaValidator.java:159)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:143)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:42)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:89)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:68)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:200)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:81)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:327)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:728)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:744)
+	at com.revature.util.SessionFactorySingleton.getSessionFactory(SessionFactorySingleton.java:19)
+	at com.revature.dao.UserDAO.getUserByUsernameAndPassword(UserDAO.java:15)
+	at com.revature.service.LoginService.login(LoginService.java:30)
+	at com.revature.controller.LoginController.lambda$0(LoginController.java:27)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:128)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:136)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:388)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:633)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:380)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:137)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(Thread.java:748)
+20 Aug 2021 - 23:24:28.225 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+20 Aug 2021 - 23:24:28.237 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @463ms to org.eclipse.jetty.util.log.Slf4jLog
+20 Aug 2021 - 23:24:28.239 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+20 Aug 2021 - 23:24:28.428 [main] ERROR io.javalin.Javalin - Failed to start Javalin
+20 Aug 2021 - 23:24:28.429 [main] INFO  io.javalin.Javalin - Stopping Javalin ...
+20 Aug 2021 - 23:24:28.433 [main] INFO  io.javalin.Javalin - Javalin has stopped
+20 Aug 2021 - 23:24:44.088 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 23:24:44.496 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 23:24:44.784 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 23:24:44.788 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 23:24:44.788 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 23:24:44.789 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 23:24:44.791 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 23:24:45.051 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 23:24:45.658 [main] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: com.revature.model.Reimbursement (class must be instantiated by Interceptor)
+20 Aug 2021 - 23:24:45.797 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5f78de22] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 23:24:46.247 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7c2a69b4] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 23:24:46.809 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 23:26:09.386 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 23:26:09.790 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 23:26:10.086 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 23:26:10.089 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 23:26:10.089 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 23:26:10.089 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 23:26:10.092 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 23:26:10.352 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 23:26:10.933 [main] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: com.revature.model.Reimbursement (class must be instantiated by Interceptor)
+20 Aug 2021 - 23:26:11.071 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5f78de22] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 23:26:11.498 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@bcb09a6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 23:26:12.144 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 23:26:19.378 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 23:26:19.776 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 23:26:20.068 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 23:26:20.071 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 23:26:20.072 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 23:26:20.072 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 23:26:20.075 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 23:26:20.337 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 23:26:20.931 [main] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: com.revature.model.Reimbursement (class must be instantiated by Interceptor)
+20 Aug 2021 - 23:26:21.068 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@67207d8a] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 23:26:21.258 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 23:26:42.084 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+20 Aug 2021 - 23:26:42.094 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @466ms to org.eclipse.jetty.util.log.Slf4jLog
+20 Aug 2021 - 23:26:42.096 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+20 Aug 2021 - 23:26:42.479 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7000/
+20 Aug 2021 - 23:26:42.480 [main] INFO  io.javalin.Javalin - Javalin started in 385ms \o/
+20 Aug 2021 - 23:26:46.334 [qtp84739718-18] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+20 Aug 2021 - 23:26:46.753 [qtp84739718-18] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20 Aug 2021 - 23:26:46.854 [qtp84739718-18] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+20 Aug 2021 - 23:26:46.857 [qtp84739718-18] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+20 Aug 2021 - 23:26:46.857 [qtp84739718-18] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+20 Aug 2021 - 23:26:46.857 [qtp84739718-18] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+20 Aug 2021 - 23:26:46.860 [qtp84739718-18] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+20 Aug 2021 - 23:26:47.135 [qtp84739718-18] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+20 Aug 2021 - 23:26:47.744 [qtp84739718-18] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: com.revature.model.Reimbursement (class must be instantiated by Interceptor)
+20 Aug 2021 - 23:26:47.869 [qtp84739718-18] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2e797868] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+20 Aug 2021 - 23:26:48.049 [qtp84739718-18] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20 Aug 2021 - 23:27:04.412 [qtp84739718-17] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is You provided incorrect credentials when attempting to log in
+21 Aug 2021 - 09:28:25.276 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+21 Aug 2021 - 09:28:25.291 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @487ms to org.eclipse.jetty.util.log.Slf4jLog
+21 Aug 2021 - 09:28:25.292 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+21 Aug 2021 - 09:28:25.479 [main] ERROR io.javalin.Javalin - Failed to start Javalin
+21 Aug 2021 - 09:28:25.479 [main] INFO  io.javalin.Javalin - Stopping Javalin ...
+21 Aug 2021 - 09:28:25.484 [main] INFO  io.javalin.Javalin - Javalin has stopped
+21 Aug 2021 - 09:28:30.394 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+21 Aug 2021 - 09:28:30.405 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @458ms to org.eclipse.jetty.util.log.Slf4jLog
+21 Aug 2021 - 09:28:30.407 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+21 Aug 2021 - 09:28:30.777 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7000/
+21 Aug 2021 - 09:28:30.778 [main] INFO  io.javalin.Javalin - Javalin started in 372ms \o/
+21 Aug 2021 - 10:01:08.217 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+21 Aug 2021 - 10:01:08.228 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @458ms to org.eclipse.jetty.util.log.Slf4jLog
+21 Aug 2021 - 10:01:08.229 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+21 Aug 2021 - 10:01:08.587 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7000/
+21 Aug 2021 - 10:01:08.587 [main] INFO  io.javalin.Javalin - Javalin started in 358ms \o/
+21 Aug 2021 - 10:01:15.286 [qtp84739718-24] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+21 Aug 2021 - 10:01:15.815 [qtp84739718-24] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+21 Aug 2021 - 10:01:15.940 [qtp84739718-24] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+21 Aug 2021 - 10:01:15.944 [qtp84739718-24] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+21 Aug 2021 - 10:01:15.945 [qtp84739718-24] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+21 Aug 2021 - 10:01:15.945 [qtp84739718-24] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+21 Aug 2021 - 10:01:15.948 [qtp84739718-24] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+21 Aug 2021 - 10:01:16.225 [qtp84739718-24] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+21 Aug 2021 - 10:01:16.951 [qtp84739718-24] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: com.revature.model.Reimbursement (class must be instantiated by Interceptor)
+21 Aug 2021 - 10:01:17.088 [qtp84739718-24] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@78f73a0e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21 Aug 2021 - 10:01:17.270 [qtp84739718-24] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21 Aug 2021 - 10:13:07.173 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+21 Aug 2021 - 10:13:07.185 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @475ms to org.eclipse.jetty.util.log.Slf4jLog
+21 Aug 2021 - 10:13:07.186 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+21 Aug 2021 - 10:13:07.547 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7000/
+21 Aug 2021 - 10:13:07.548 [main] INFO  io.javalin.Javalin - Javalin started in 362ms \o/
+21 Aug 2021 - 10:14:48.493 [qtp84739718-15] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+21 Aug 2021 - 10:14:48.897 [qtp84739718-15] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+21 Aug 2021 - 10:14:48.998 [qtp84739718-15] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+21 Aug 2021 - 10:14:49.003 [qtp84739718-15] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+21 Aug 2021 - 10:14:49.003 [qtp84739718-15] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+21 Aug 2021 - 10:14:49.003 [qtp84739718-15] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+21 Aug 2021 - 10:14:49.006 [qtp84739718-15] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+21 Aug 2021 - 10:14:49.268 [qtp84739718-15] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+21 Aug 2021 - 10:14:49.858 [qtp84739718-15] INFO  org.hibernate.tuple.PojoInstantiator - HHH000182: No default (no-argument) constructor for class: com.revature.model.Reimbursement (class must be instantiated by Interceptor)
+21 Aug 2021 - 10:14:49.981 [qtp84739718-15] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3da2f8dd] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+21 Aug 2021 - 10:14:50.150 [qtp84739718-15] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+21 Aug 2021 - 10:14:50.427 [qtp84739718-15] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is You provided incorrect credentials when attempting to log in
+21 Aug 2021 - 10:14:50.594 [qtp84739718-14] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is You provided incorrect credentials when attempting to log in
+21 Aug 2021 - 10:14:50.767 [qtp84739718-18] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is You provided incorrect credentials when attempting to log in
+21 Aug 2021 - 10:14:50.956 [qtp84739718-13] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is You provided incorrect credentials when attempting to log in
+21 Aug 2021 - 10:14:54.986 [qtp84739718-24] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is You provided incorrect credentials when attempting to log in
+21 Aug 2021 - 10:16:09.689 [qtp84739718-18] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is Username and password cannot be blank
+21 Aug 2021 - 10:16:12.994 [qtp84739718-24] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is You provided incorrect credentials when attempting to log in
+21 Aug 2021 - 10:16:19.457 [qtp84739718-18] INFO  c.r.controller.ExceptionController - Exception Occurred: Exception message is You provided incorrect credentials when attempting to log in

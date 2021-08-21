@@ -36,174 +36,135 @@ public class Reimbursement {
 	private String reimbDiscription;	
 	
 	@Column(name = "reimbRecipe")
-	private String reimbRecipe;	
+	private int reimbRecipe;	
 //	@OneToMany(mappedBy = "ship", cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE })
 
 	@ManyToOne
 	@JoinColumn(name = "AuthorId", nullable = false)
-	private User author;
+	private User reimbAuthor;
 	
 	@ManyToOne
 	@JoinColumn(name = "resolverId")
-	private User resolver;
+	private User reimbResolver;
 	
 	@ManyToOne
 	@JoinColumn(name = "statusId")
-	private User statusId;
+	private ReimbursementStatus reimbStatus;
 	
 	@ManyToOne
 	@JoinColumn(name = "reimbTypeId")
-	private User reimbTypeId;
-	
-	
+	private User reimbType;
 
-	public Reimbursement() {
+	public Reimbursement(double d, Timestamp timestamp, Timestamp timestamp2, String string, int i) {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-
-
-	public Reimbursement(int id, double reimbAmount, Timestamp reimbSubmitted, Timestamp reimbResolved,
-			String reimbDiscription, String reimbRecipe, User author, User resolver, User statusId, User reimbTypeId) {
+	public Reimbursement(double reimbAmount, Timestamp reimbSubmitted, Timestamp reimbResolved, String reimbDiscription,
+			int reimbRecipe, User reimbAuthor, User reimbResolver, ReimbursementStatus reimbStatus, User reimbType) {
 		super();
-		//this.id = id;
 		this.reimbAmount = reimbAmount;
 		this.reimbSubmitted = reimbSubmitted;
 		this.reimbResolved = reimbResolved;
 		this.reimbDiscription = reimbDiscription;
 		this.reimbRecipe = reimbRecipe;
+		this.reimbAuthor = reimbAuthor;
+		this.reimbResolver = reimbResolver;
+		this.reimbStatus = reimbStatus;
+		this.reimbType = reimbType;
 	}
 
+	
 
+	public Reimbursement(double amount, Timestamp timestampcreated, String timestampresolved, String string) {
+		// TODO Auto-generated constructor stub
+	}
 
 	public int getId() {
 		return id;
 	}
 
-
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
-
 
 	public double getReimbAmount() {
 		return reimbAmount;
 	}
 
-
-
 	public void setReimbAmount(double reimbAmount) {
 		this.reimbAmount = reimbAmount;
 	}
-
-
 
 	public Timestamp getReimbSubmitted() {
 		return reimbSubmitted;
 	}
 
-
-
 	public void setReimbSubmitted(Timestamp reimbSubmitted) {
 		this.reimbSubmitted = reimbSubmitted;
 	}
-
-
 
 	public Timestamp getReimbResolved() {
 		return reimbResolved;
 	}
 
-
-
 	public void setReimbResolved(Timestamp reimbResolved) {
 		this.reimbResolved = reimbResolved;
 	}
-
-
 
 	public String getReimbDiscription() {
 		return reimbDiscription;
 	}
 
-
-
 	public void setReimbDiscription(String reimbDiscription) {
 		this.reimbDiscription = reimbDiscription;
 	}
 
-
-
-	public String getReimbRecipe() {
+	public int getReimbRecipe() {
 		return reimbRecipe;
 	}
 
-
-
-	public void setReimbRecipe(String reimbRecipe) {
+	public void setReimbRecipe(int reimbRecipe) {
 		this.reimbRecipe = reimbRecipe;
 	}
 
-
-
-	public User getAuthor() {
-		return author;
+	public User getReimbAuthor() {
+		return reimbAuthor;
 	}
 
-
-
-	public void setAuthor(User author) {
-		this.author = author;
+	public void setReimbAuthor(User reimbAuthor) {
+		this.reimbAuthor = reimbAuthor;
 	}
 
-
-
-	public User getResolver() {
-		return resolver;
+	public User getReimbResolver() {
+		return reimbResolver;
 	}
 
-
-
-	public void setResolver(User resolver) {
-		this.resolver = resolver;
+	public void setReimbResolver(User reimbResolver) {
+		this.reimbResolver = reimbResolver;
 	}
 
-
-
-	public User getStatusId() {
-		return statusId;
+	public ReimbursementStatus getReimbStatus() {
+		return reimbStatus;
 	}
 
-
-
-	public void setStatusId(User statusId) {
-		this.statusId = statusId;
+	public void setReimbStatus(ReimbursementStatus pending) {
+		this.reimbStatus = pending;
 	}
 
-
-
-	public User getReimbTypeId() {
-		return reimbTypeId;
+	public User getReimbType() {
+		return reimbType;
 	}
 
-
-
-	public void setReimbTypeId(User reimbTypeId) {
-		this.reimbTypeId = reimbTypeId;
+	public void setReimbType(User reimbType) {
+		this.reimbType = reimbType;
 	}
-
-
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(author, id, reimbAmount, reimbDiscription, reimbRecipe, reimbResolved, reimbSubmitted,
-				reimbTypeId, resolver, statusId);
+		return Objects.hash(id, reimbAmount, reimbAuthor, reimbDiscription, reimbRecipe, reimbResolved, reimbResolver,
+				reimbStatus, reimbSubmitted, reimbType);
 	}
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -214,23 +175,33 @@ public class Reimbursement {
 		if (getClass() != obj.getClass())
 			return false;
 		Reimbursement other = (Reimbursement) obj;
-		return Objects.equals(author, other.author) && id == other.id
-				&& Double.doubleToLongBits(reimbAmount) == Double.doubleToLongBits(other.reimbAmount)
-				&& Objects.equals(reimbDiscription, other.reimbDiscription)
-				&& Objects.equals(reimbRecipe, other.reimbRecipe) && Objects.equals(reimbResolved, other.reimbResolved)
-				&& Objects.equals(reimbSubmitted, other.reimbSubmitted)
-				&& Objects.equals(reimbTypeId, other.reimbTypeId) && Objects.equals(resolver, other.resolver)
-				&& Objects.equals(statusId, other.statusId);
+		return id == other.id && Double.doubleToLongBits(reimbAmount) == Double.doubleToLongBits(other.reimbAmount)
+				&& Objects.equals(reimbAuthor, other.reimbAuthor)
+				&& Objects.equals(reimbDiscription, other.reimbDiscription) && reimbRecipe == other.reimbRecipe
+				&& Objects.equals(reimbResolved, other.reimbResolved)
+				&& Objects.equals(reimbResolver, other.reimbResolver) && Objects.equals(reimbStatus, other.reimbStatus)
+				&& Objects.equals(reimbSubmitted, other.reimbSubmitted) && Objects.equals(reimbType, other.reimbType);
 	}
-
-
 
 	@Override
 	public String toString() {
 		return "Reimbursement [id=" + id + ", reimbAmount=" + reimbAmount + ", reimbSubmitted=" + reimbSubmitted
 				+ ", reimbResolved=" + reimbResolved + ", reimbDiscription=" + reimbDiscription + ", reimbRecipe="
-				+ reimbRecipe + ", author=" + author + ", resolver=" + resolver + ", statusId=" + statusId
-				+ ", reimbTypeId=" + reimbTypeId + "]";
+				+ reimbRecipe + ", reimbAuthor=" + reimbAuthor + ", reimbResolver=" + reimbResolver + ", reimbStatus="
+				+ reimbStatus + ", reimbType=" + reimbType + "]";
 	}
 
-}	
+	public void setReimbStatus(User test123) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setType(ReimbursementType travel) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}
+
+	

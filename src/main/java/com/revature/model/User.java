@@ -31,24 +31,36 @@ public class User {
 	
 	@Column(name = "email", length = 80)
 	private String email;
+	
+	@Column(name = "userRole", length = 80)
+	private String userRole;
 
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	
-	public User( String username, String password, String fName, String lName, String email) {
+	public User(String username, String password, String fName, String lName, String email, String userRole) {
 		super();
 		this.username = username;
 		this.password = password;
 		this.fName = fName;
 		this.lName = lName;
 		this.email = email;
+		this.userRole = userRole;
 	}
 
+	public User(String username, String password, String fName, String Lname, String email) {
+		// TODO Auto-generated constructor stub
+	}
 
+	public int getId() {
+		return id;
+	}
 
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getUsername() {
 		return username;
@@ -90,12 +102,18 @@ public class User {
 		this.email = email;
 	}
 
+	public String getUserRole() {
+		return userRole;
+	}
+
+	public void setUserRole(String userRole) {
+		this.userRole = userRole;
+	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(email, fName, id, lName, password, username);
+		return Objects.hash(email, fName, id, lName, password, userRole, username);
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -108,22 +126,18 @@ public class User {
 		User other = (User) obj;
 		return Objects.equals(email, other.email) && Objects.equals(fName, other.fName) && id == other.id
 				&& Objects.equals(lName, other.lName) && Objects.equals(password, other.password)
-				&& Objects.equals(username, other.username);
+				&& Objects.equals(userRole, other.userRole) && Objects.equals(username, other.username);
 	}
-
 
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", password=" + password + ", fName=" + fName + ", lName="
-				+ lName + ", email=" + email + "]";
+				+ lName + ", email=" + email + ", userRole=" + userRole + "]";
 	}
 
-
-	public void setUserRole(UserRole role) {
+	public void setUserRole(UserRole admin) {
 		// TODO Auto-generated method stub
 		
 	}
-	
-	
 
-}
+	}
