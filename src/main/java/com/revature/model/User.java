@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -32,26 +34,23 @@ public class User {
 	@Column(name = "email", length = 80)
 	private String email;
 	
-	@Column(name = "userRole", length = 80)
-	private String userRole;
+	@ManyToOne
+	@JoinColumn(name = "userRoleId")
+	private UserRole userRole;
+
 
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(String username, String password, String fName, String lName, String email, String userRole) {
+	public User(String username, String password, String fName, String lName, String email) {
 		super();
 		this.username = username;
 		this.password = password;
 		this.fName = fName;
 		this.lName = lName;
 		this.email = email;
-		this.userRole = userRole;
-	}
-
-	public User(String username, String password, String fName, String Lname, String email) {
-		// TODO Auto-generated constructor stub
 	}
 
 	public int getId() {
@@ -102,11 +101,11 @@ public class User {
 		this.email = email;
 	}
 
-	public String getUserRole() {
+	public UserRole getUserRole() {
 		return userRole;
 	}
 
-	public void setUserRole(String userRole) {
+	public void setUserRole(UserRole userRole) {
 		this.userRole = userRole;
 	}
 
@@ -134,10 +133,7 @@ public class User {
 		return "User [id=" + id + ", username=" + username + ", password=" + password + ", fName=" + fName + ", lName="
 				+ lName + ", email=" + email + ", userRole=" + userRole + "]";
 	}
+	
+}
 
-	public void setUserRole(UserRole admin) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	}

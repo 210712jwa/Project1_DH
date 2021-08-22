@@ -14,6 +14,7 @@ import javax.persistence.Table;
 public class ReimbursementType {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column (name = "id")
 	private int id;
 	
 	@Column(name = "reimbType")

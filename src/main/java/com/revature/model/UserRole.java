@@ -10,17 +10,20 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 //signify this class should be mapped to a table
+import javax.persistence.Table;
 
 
 @Entity
+@Table(name = "userRole")
 public class UserRole {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
 	private int id;
 
 	
-	@Column(name = "userRole")
+	@Column(name = "userRole", nullable = false, unique = true)
 	private String role;
 	
 

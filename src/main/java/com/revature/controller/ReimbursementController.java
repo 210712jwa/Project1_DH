@@ -45,7 +45,7 @@ public class ReimbursementController implements Controller {
 	
 	@Override
 	public void mapEndpoints(Javalin app) {
-		app.get("/user/:userid/ship", getAllShipsBelongingToSpecificUser);
+		app.get("/user/:userid/reimbursement", getAllShipsBelongingToSpecificUser);
 	}
 
 }

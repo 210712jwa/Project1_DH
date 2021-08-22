@@ -27,10 +27,10 @@ public class Reimbursement {
 	private double reimbAmount;
 	
 	@Column(name = "reimbSubmitted")
-	private Timestamp reimbSubmitted = new Timestamp(System.currentTimeMillis());
+	private String reimbSubmitted;
 	
 	@Column(name = "reimbResolved")
-	private Timestamp reimbResolved = new Timestamp(System.currentTimeMillis());
+	private String reimbResolved;
 	
 	@Column(name = "reimbDiscription")
 	private String reimbDiscription;	
@@ -55,28 +55,23 @@ public class Reimbursement {
 	@JoinColumn(name = "reimbTypeId")
 	private User reimbType;
 
-	public Reimbursement(double d, Timestamp timestamp, Timestamp timestamp2, String string, int i) {
+
+	public Reimbursement() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Reimbursement(double reimbAmount, Timestamp reimbSubmitted, Timestamp reimbResolved, String reimbDiscription,
-			int reimbRecipe, User reimbAuthor, User reimbResolver, ReimbursementStatus reimbStatus, User reimbType) {
+	public Reimbursement(double reimbAmount, String reimbSubmitted, String reimbResolved,
+			String reimbDiscription, int reimbRecipe) {
 		super();
 		this.reimbAmount = reimbAmount;
 		this.reimbSubmitted = reimbSubmitted;
 		this.reimbResolved = reimbResolved;
 		this.reimbDiscription = reimbDiscription;
 		this.reimbRecipe = reimbRecipe;
-		this.reimbAuthor = reimbAuthor;
-		this.reimbResolver = reimbResolver;
-		this.reimbStatus = reimbStatus;
-		this.reimbType = reimbType;
 	}
 
-	
-
-	public Reimbursement(double amount, Timestamp timestampcreated, String timestampresolved, String string) {
+	public Reimbursement(double d, long currentTimeMillis, long currentTimeMillis2, String string, int i) {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -96,19 +91,19 @@ public class Reimbursement {
 		this.reimbAmount = reimbAmount;
 	}
 
-	public Timestamp getReimbSubmitted() {
+	public String getReimbSubmitted() {
 		return reimbSubmitted;
 	}
 
-	public void setReimbSubmitted(Timestamp reimbSubmitted) {
+	public void setReimbSubmitted(String reimbSubmitted) {
 		this.reimbSubmitted = reimbSubmitted;
 	}
 
-	public Timestamp getReimbResolved() {
+	public String getReimbResolved() {
 		return reimbResolved;
 	}
 
-	public void setReimbResolved(Timestamp reimbResolved) {
+	public void setReimbResolved(String reimbResolved) {
 		this.reimbResolved = reimbResolved;
 	}
 
@@ -160,6 +155,15 @@ public class Reimbursement {
 		this.reimbType = reimbType;
 	}
 
+
+	@Override
+	public String toString() {
+		return "Reimbursement [id=" + id + ", reimbAmount=" + reimbAmount + ", reimbSubmitted=" + reimbSubmitted
+				+ ", reimbResolved=" + reimbResolved + ", reimbDiscription=" + reimbDiscription + ", reimbRecipe="
+				+ reimbRecipe + ", reimbAuthor=" + reimbAuthor + ", reimbResolver=" + reimbResolver + ", reimbStatus="
+				+ reimbStatus + ", reimbType=" + reimbType + "]";
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id, reimbAmount, reimbAuthor, reimbDiscription, reimbRecipe, reimbResolved, reimbResolver,
@@ -183,20 +187,19 @@ public class Reimbursement {
 				&& Objects.equals(reimbSubmitted, other.reimbSubmitted) && Objects.equals(reimbType, other.reimbType);
 	}
 
-	@Override
-	public String toString() {
-		return "Reimbursement [id=" + id + ", reimbAmount=" + reimbAmount + ", reimbSubmitted=" + reimbSubmitted
-				+ ", reimbResolved=" + reimbResolved + ", reimbDiscription=" + reimbDiscription + ", reimbRecipe="
-				+ reimbRecipe + ", reimbAuthor=" + reimbAuthor + ", reimbResolver=" + reimbResolver + ", reimbStatus="
-				+ reimbStatus + ", reimbType=" + reimbType + "]";
-	}
-
 	public void setReimbStatus(User test123) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	public void setType(ReimbursementType travel) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	public void setReimbType(ReimbursementType business) {
 		// TODO Auto-generated method stub
 		
 	}

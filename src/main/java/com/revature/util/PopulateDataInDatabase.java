@@ -15,8 +15,10 @@ import com.revature.model.UserRole;
 public class PopulateDataInDatabase {
 
 	public static void main(String[] args) {
-		populateReimburesementStatus_ReimbursementType_UserRole();
-		addSampleUsers();
+		//SessionFactorySingleton.getSessionFactory();
+		//populateReimburesementStatus_ReimbursementType_UserRole();
+		//addSampleUsers();
+		addReimbursements_user123();
 	}
 	
 	private static void populateReimburesementStatus_ReimbursementType_UserRole() {
@@ -52,15 +54,16 @@ public class PopulateDataInDatabase {
 		Session session = sf.openSession();
 		Transaction tx = session.beginTransaction();
 		
-		User adminUser1 = new User("username1","password","david", "huynh", "david@revature.net", "admin");
-		UserRole admin = (UserRole) session.createQuery("FROM UserRole ur WHERE ur.role = 'admin'").getSingleResult();
+		User adminUser1 = new User("username1","password","david", "huynh", "dhuynh@SOInet");
+		UserRole admin = (UserRole) session.createQuery("FROM UserRole ur WHERE role = 'admin'").getSingleResult();
 		adminUser1.setUserRole(admin);
 		session.persist(adminUser1);
 		
-		UserRole user = (UserRole) session.createQuery("FROM UserRole ur WHERE ur.role = 'user'").getSingleResult();
-		User regularUser1 = new User("username2","password","Tony", "Stark", "TStark@SOI.net", "user");
+		UserRole user = (UserRole) session.createQuery("FROM UserRole ur WHERE role = 'user'").getSingleResult();
+		User regularUser1 = new User("username2","password","Tony", "Stark", "TStark@SOI.net");
 		regularUser1.setUserRole(user);
-		User regularUser2 = new User("username3","password","Bruce", "Banner", "BBanner@SOI.net", "user");
+		
+		User regularUser2 = new User("username3","password","Bruce", "Banner", "BBanner@SOI.net");
 		regularUser2.setUserRole(user);
 		
 		session.persist(regularUser1);
@@ -70,37 +73,38 @@ public class PopulateDataInDatabase {
 		session.close();
 	}
 	
-	private static void addShips_user123() {
+	private static void addReimbursements_user123() {
 		SessionFactory sf = SessionFactorySingleton.getSessionFactory();
 		Session session = sf.openSession();
 		Transaction tx = session.beginTransaction();
-		Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-		User test123 = (User) session.createQuery("FROM User u WHERE u.username = 'username1'").getSingleResult();
-		ReimbursementStatus pending = (ReimbursementStatus) session.createQuery("FROM ReimbursementStatus s WHERE s.status = 'pending'").getSingleResult();
+		User test = (User) session.createQuery("FROM User u WHERE username = 'username1'").getSingleResult();
 		
-		ReimbursementType travel = (ReimbursementType) session.createQuery("FROM ReimburesementType s WHERE s.type = 'travel'").getSingleResult();
-		ReimbursementType business = (ReimbursementType) session.createQuery("FROM ReimburesementType s WHERE s.type = 'business'").getSingleResult();
-		ReimbursementType medical = (ReimbursementType) session.createQuery("FROM ReimbursementType s WHERE s.type = 'medical'").getSingleResult();
+		ReimbursementStatus pending = (ReimbursementStatus) session.createQuery("FROM ReimbursementStatus s WHERE s.reimbStatus = 'pending'").getSingleResult();
+		 
+		ReimbursementType travel = (ReimbursementType) session.createQuery("FROM ReimbursementType  s WHERE s.reimbType = 'travel'").getSingleResult();
+		ReimbursementType business = (ReimbursementType) session.createQuery("FROM ReimbursementType s  WHERE s.reimbType = 'business'").getSingleResult();
+		ReimbursementType medical = (ReimbursementType) session.createQuery("FROM ReimbursementType s   WHERE s.reimbType = 'medical'").getSingleResult();
 		
-		Reimbursement reimbursement1 = new Reimbursement( 495.95, timestamp , "null", "Went to China for tea");
-		reimbursement1.setReimbAuthor(test123);
+		Reimbursement reimbursement1 = new Reimbursement(495.66, "time and date", "time and date", "diiner for meeting", 1);
+		reimbursement1.setReimbAuthor(test);
 		reimbursement1.setReimbStatus(pending);
 		reimbursement1.setType(travel);
 		
-		Reimbursement reimbursement2 = new Reimbursement( 9985.95, timestamp , "null", "ordered dinner for meeting");
-		reimbursement2.setReimbAuthor(test123);
+		Reimbursement reimbursement2 = new Reimbursement(495.66,"time and date", "time and date", "diiner for meeting", 1);
+		reimbursement2.setReimbAuthor(test);
 		reimbursement2.setReimbStatus(pending);
-		reimbursement2.setType(business);
+		reimbursement2.setReimbType(business);
 		
-		Reimbursement reimbursement3 = new Reimbursement(49005.95, timestamp , "null", "car accident");
-		reimbursement3.setReimbAuthor(test123);
+		Reimbursement reimbursement3 = new Reimbursement(495.66, "time and date", "time and date", "diiner for meeting", 1);
+		reimbursement3.setReimbAuthor(test);
 		reimbursement3.setReimbStatus(pending);
-		reimbursement3.setType(medical);
+		reimbursement3.setReimbType(medical);
 		
 		session.persist(reimbursement1);
 		session.persist(reimbursement2);
 		session.persist(reimbursement3);
 		
+		System.out.println(reimbursement1.getId());
 		tx.commit();
 		session.close();
 	}
