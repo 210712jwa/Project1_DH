@@ -18,7 +18,7 @@ public class ReimbursementController implements Controller {
 		this.reimbursementService = new ReimbursementService();
 	}
 	
-	private Handler getAllShipsBelongingToSpecificUser = (ctx) -> {
+	private Handler getAllReimbursementsBelongingToSpecificUser = (ctx) -> {
 		HttpSession session = ctx.req.getSession();
 		
 		if (session.getAttribute("currentUser") == null) {
@@ -26,7 +26,7 @@ public class ReimbursementController implements Controller {
 		} else {
 			User currentUser = (User) session.getAttribute("currentUser");
 			
-			String userId = ctx.pathParam("userid");
+			String userId = ctx.pathParam("userId");
 			
 			if (currentUser.getId() == Integer.parseInt(userId)) {
 				List<Reimbursement> reimbursements = reimbursementService.getAllReimbursementFromUserId(userId);
@@ -34,7 +34,7 @@ public class ReimbursementController implements Controller {
 				ctx.json(reimbursements);
 				ctx.status(200);
 			} else {
-				ctx.json(new MessageDTO("You are not the user that you want to retrieve all ships from"));
+				ctx.json(new MessageDTO("You are not the user that you want to retrieve all users from"));
 				ctx.status(401);
 			}
 		}
@@ -45,7 +45,7 @@ public class ReimbursementController implements Controller {
 	
 	@Override
 	public void mapEndpoints(Javalin app) {
-		app.get("/user/:userid/reimbursement", getAllShipsBelongingToSpecificUser);
+		app.get("/user/:userId/reimbursement", getAllReimbursementsBelongingToSpecificUser);
 	}
 
 }

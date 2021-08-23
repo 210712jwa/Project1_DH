@@ -14,7 +14,7 @@ public class ReimbursementDAO {
 		Transaction tx = session.beginTransaction();
 		
 		// Get reimbursements by owner id
-		List<Reimbursement> reimbursements = session.createQuery("SELECT s FROM Reimbursement  JOIN s.author u WHERE u.id = id").setParameter("userId", id).getResultList();
+		List<Reimbursement> reimbursements = session.createQuery("SELECT s FROM Reimbursement s JOIN s.reimbAuthor u WHERE u.id = :id").setParameter("id", id).getResultList();
 	
 		return reimbursements;
 	}

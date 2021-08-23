@@ -19,7 +19,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)	//about the same as auto_incerment
 	private int id;
 	
-	@Column(name = "username", length = 50)
+	@Column(name = "username", length = 50, unique = true)
 	private String username;
 	
 	@Column(name = "password", length = 50)

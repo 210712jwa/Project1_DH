@@ -3,6 +3,7 @@ package com.revature.app;
 import com.revature.controller.Controller;
 import com.revature.controller.ExceptionController;
 import com.revature.controller.LoginController;
+import com.revature.controller.ReimbursementController;
 
 import io.javalin.Javalin;
 
@@ -15,7 +16,7 @@ public class Application {
 			config.enableCorsForAllOrigins(); // could include ("http://localhost:7000")
 		});
 		
-		mapControllers(new LoginController(), new ExceptionController());
+		mapControllers(new LoginController(), new ExceptionController(), new ReimbursementController());
 		
 		app.start(7000);
 	}

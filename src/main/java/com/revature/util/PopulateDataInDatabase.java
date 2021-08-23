@@ -16,8 +16,8 @@ public class PopulateDataInDatabase {
 
 	public static void main(String[] args) {
 		//SessionFactorySingleton.getSessionFactory();
-		//populateReimburesementStatus_ReimbursementType_UserRole();
-		//addSampleUsers();
+		populateReimburesementStatus_ReimbursementType_UserRole();
+		addSampleUsers();
 		addReimbursements_user123();
 	}
 	
@@ -55,7 +55,7 @@ public class PopulateDataInDatabase {
 		Transaction tx = session.beginTransaction();
 		
 		User adminUser1 = new User("username1","password","david", "huynh", "dhuynh@SOInet");
-		UserRole admin = (UserRole) session.createQuery("FROM UserRole ur WHERE role = 'admin'").getSingleResult();
+		UserRole admin = (UserRole) session.createQuery("FROM UserRole ur WHERE ur.role = 'admin'").getSingleResult();
 		adminUser1.setUserRole(admin);
 		session.persist(adminUser1);
 		
@@ -71,6 +71,7 @@ public class PopulateDataInDatabase {
 		
 		tx.commit();
 		session.close();
+		
 	}
 	
 	private static void addReimbursements_user123() {
@@ -85,17 +86,17 @@ public class PopulateDataInDatabase {
 		ReimbursementType business = (ReimbursementType) session.createQuery("FROM ReimbursementType s  WHERE s.reimbType = 'business'").getSingleResult();
 		ReimbursementType medical = (ReimbursementType) session.createQuery("FROM ReimbursementType s   WHERE s.reimbType = 'medical'").getSingleResult();
 		
-		Reimbursement reimbursement1 = new Reimbursement(495.66, "time and date", "time and date", "diiner for meeting", 1);
+		Reimbursement reimbursement1 = new Reimbursement(495.66, "time and date", "time and date", "travel to china", 1);
 		reimbursement1.setReimbAuthor(test);
 		reimbursement1.setReimbStatus(pending);
 		reimbursement1.setType(travel);
 		
-		Reimbursement reimbursement2 = new Reimbursement(495.66,"time and date", "time and date", "diiner for meeting", 1);
+		Reimbursement reimbursement2 = new Reimbursement(65.33,"time and date", "time and date", "diiner for meeting", 1);
 		reimbursement2.setReimbAuthor(test);
 		reimbursement2.setReimbStatus(pending);
 		reimbursement2.setReimbType(business);
 		
-		Reimbursement reimbursement3 = new Reimbursement(495.66, "time and date", "time and date", "diiner for meeting", 1);
+		Reimbursement reimbursement3 = new Reimbursement(5403.66, "time and date", "time and date", "slipped and fell", 1);
 		reimbursement3.setReimbAuthor(test);
 		reimbursement3.setReimbStatus(pending);
 		reimbursement3.setReimbType(medical);
@@ -104,7 +105,6 @@ public class PopulateDataInDatabase {
 		session.persist(reimbursement2);
 		session.persist(reimbursement3);
 		
-		System.out.println(reimbursement1.getId());
 		tx.commit();
 		session.close();
 	}
