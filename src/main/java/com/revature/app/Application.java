@@ -14,6 +14,7 @@ public class Application {
 	public static void main(String[] args) {
 		app = Javalin.create((config) -> {
 			config.enableCorsForAllOrigins(); // could include ("http://localhost:7000")
+			config.addStaticFiles("static"); // this allows you to run http from the broswer
 		});
 		
 		mapControllers(new LoginController(), new ExceptionController(), new ReimbursementController());

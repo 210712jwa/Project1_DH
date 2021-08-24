@@ -11,7 +11,7 @@ function login(event) {
         'password': passwordInput.value
     };
 
-    fetch('http://localhost:7000/login', {  // can change to local host , but have to change in html as well.
+    fetch('http://127.0.0.1:7000/login', {  // can change to local host , but have to change in html as well.
         method: 'POST',
         credentials: 'include', // this specifies that when you receive cookies,
         // you should include them in future requests.
@@ -39,7 +39,7 @@ function displayInvalidLogin() {
 };
 
 function checkIfUserCurrentlyLoggedIn(event) {
-    fetch('http://localhost:7000/currentuser', {
+    fetch('http://127.0.0.1:7000/currentuser', {
         'credentials': 'include',
         'method': 'GET'
     }).then((response) => {

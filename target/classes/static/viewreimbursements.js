@@ -1,6 +1,6 @@
 
 function onLoad(event) {
-    fetch('http://localhost:7000/currentuser', {
+    fetch('http://127.0.0.1:7000/currentuser', {
         'credentials': 'include',
         'method': 'GET'
     }).then((response) => {
@@ -10,14 +10,14 @@ function onLoad(event) {
             return response.json();
         }
     }).then((user) => {
-        return fetch(`http://localhost:7000/user/${user.id}/reimbursement`, {
+        return fetch(`http://127.0.0.1:7000/user/${user.id}/reimbursement`, {
             'method': 'GET', 
             'credentials': 'include'
         });
     }).then((response) => {
         return response.json()
     }).then((reimbursements) => {
-        populateReimbursements(reimbursements);
+        populateReimbursementss(reimbursements);
     })
 }
 
@@ -39,13 +39,13 @@ function populateReimbursements(reimbursementArray) {
         reimbursementTypeTd.innerHTML = reimbursement.age;
 
         let reimbursementAuthorFirstNameTd = document.createElement('td');
-        reimbursementAuthorFirstNameTd.innerHTML = reimbursement.author.lName;
+        reimbursementAuthorFirstNameTd.innerHTML = reimbursement.author.firstName;
 
         let reimbursementAuthorLastNameTd = document.createElement('td');
-        reimbursementAuthorLastNameTd.innerHTML = reimbursement.author.lName;
+        reimbursementAuthorLastNameTd.innerHTML = reimbursement.author.lastName;
 
         let reimbursementAuthorEmailTd = document.createElement('td');
-        reimbursementAuthorEmailTd.innerHTML = reimbursement.email;
+        reimbursementAuthorEmailTd.innerHTML = reimbursement.age;
 
         let reimbursementStatusTd = document.createElement('td');
         reimbursementStatusTd.innerHTML = reimbursement.status.status;
@@ -53,9 +53,9 @@ function populateReimbursements(reimbursementArray) {
         tr.appendChild( reimbursementIdTd);
         tr.appendChild( reimbursementAmountTd);
         tr.appendChild( reimbursementTypeTd);
-        tr.appendChild( reimbursementAuthorFirstNameTd);
-        tr.appendChild( reimbursementAuthorLastNameTd);
-        tr.appendChild( reimbursementStatusTd);
+        tr.appendChild( reimbursementAuthorFirstName);
+        tr.appendChild( reimbursementAuthorLastName);
+        tr.appendChild( reimbursementStatus);
 
         tbody.appendChild(tr);
     }

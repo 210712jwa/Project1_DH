@@ -46,6 +46,9 @@ public class ReimbursementController implements Controller {
 	@Override
 	public void mapEndpoints(Javalin app) {
 		app.get("/user/:userId/reimbursement", getAllReimbursementsBelongingToSpecificUser);
+	//	app.post("/user/:userId/reimbursement", addReimbursemntForm);
+		//app.put("/user/:userId/reimbursement", editReimbursemntForm);
+		//app.delete("/user/:userId/reimbursement", deleteReimbursemntForm);
 	}
 
 }
