@@ -1,10 +1,17 @@
 package com.revature.dao;
 
+import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+
+import com.revature.dto.AddReimbursementDTO;
 import com.revature.model.Reimbursement;
+import com.revature.model.ReimbursementStatus;
+import com.revature.model.ReimbursementType;
+import com.revature.model.User;
 import com.revature.util.SessionFactorySingleton;
 
 public class ReimbursementDAO {
@@ -18,5 +25,38 @@ public class ReimbursementDAO {
 	
 		return reimbursements;
 	}
+
+	public Reimbursement addReimbursemntFormBelongingToSpecificUser(int id, AddReimbursementDTO reimbToAdd) {
+		//Date date = new Date();
+		Timestamp submitted = new Timestamp(System.currentTimeMillis());
+		
+		
+		SessionFactory sf = SessionFactorySingleton.getSessionFactory();
+		Session session = sf.openSession();
+		Transaction tx = session.beginTransaction();
+		
+		Reimbursement addReimbursement = new Reimbursement();
+		
+		
+		addReimbursement.setReimbAmount(reimbToAdd.getAmount());
+		addReimbursement.setReimbDiscription(reimbToAdd.getDiscription());
+		addReimbursement.setReimbSubmitted(submitted);
+		
+		addReimbursement.setReimbAuthor(session.get(User.class, id));
+		addReimbursement.setType(session.get(ReimbursementType.class, reimbToAdd.getType()));
+		addReimbursement.setReimbStatus(session.get(ReimbursementStatus.class, 1));
+		addReimbursement.setReimbResolver(null);
+		addReimbursement.setReimbResolver(null);
+		addReimbursement.setReimbRecipe(1);
+		
+		session.persist(addReimbursement);
+		tx.commit();
+		session.close();
+		
+		return addReimbursement;
+		
+	}
+
+
 }
 

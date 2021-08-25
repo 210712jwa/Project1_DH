@@ -11850,3 +11850,288 @@ org.hibernate.HibernateException: The internal connection pool has reached its m
 23 Aug 2021 - 20:26:53.596 [qtp1896294051-13] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
 23 Aug 2021 - 20:26:54.325 [qtp1896294051-13] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6943253] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 23 Aug 2021 - 20:26:54.492 [qtp1896294051-13] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+24 Aug 2021 - 14:27:19.920 [qtp1896294051-15] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 08000
+24 Aug 2021 - 14:27:19.921 [qtp1896294051-15] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - (conn=8616) Connection reset by peer: socket write error
+24 Aug 2021 - 14:27:19.932 [qtp1896294051-15] WARN  io.javalin.Javalin - Uncaught exception
+javax.persistence.PersistenceException: org.hibernate.exception.JDBCConnectionException: could not extract ResultSet
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:154)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1626)
+	at org.hibernate.query.Query.getResultList(Query.java:165)
+	at com.revature.dao.ReimbursementDAO.getAllReimbursementsFromUserId(ReimbursementDAO.java:17)
+	at com.revature.service.ReimbursementService.getAllReimbursementFromUserId(ReimbursementService.java:21)
+	at com.revature.controller.ReimbursementController.lambda$0(ReimbursementController.java:32)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:128)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:136)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:388)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:633)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:380)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:137)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.hibernate.exception.JDBCConnectionException: could not extract ResultSet
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:48)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:37)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:67)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2315)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2068)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:2030)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:956)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:357)
+	at org.hibernate.loader.Loader.doList(Loader.java:2861)
+	at org.hibernate.loader.Loader.doList(Loader.java:2843)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2675)
+	at org.hibernate.loader.Loader.list(Loader.java:2670)
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:540)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:400)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:219)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1443)
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1649)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1617)
+	... 43 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: (conn=8616) Connection reset by peer: socket write error
+	at org.mariadb.jdbc.internal.util.exceptions.ExceptionFactory.createException(ExceptionFactory.java:73)
+	at org.mariadb.jdbc.internal.util.exceptions.ExceptionFactory.create(ExceptionFactory.java:158)
+	at org.mariadb.jdbc.MariaDbStatement.executeExceptionEpilogue(MariaDbStatement.java:266)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.executeInternal(ClientSidePreparedStatement.java:229)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.execute(ClientSidePreparedStatement.java:149)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.executeQuery(ClientSidePreparedStatement.java:163)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+	... 58 common frames omitted
+Caused by: org.mariadb.jdbc.internal.util.exceptions.MariaDbSqlException: Connection reset by peer: socket write error
+	at org.mariadb.jdbc.internal.util.exceptions.MariaDbSqlException.of(MariaDbSqlException.java:34)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.exceptionWithQuery(AbstractQueryProtocol.java:194)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.exceptionWithQuery(AbstractQueryProtocol.java:177)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:323)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.executeInternal(ClientSidePreparedStatement.java:220)
+	... 61 common frames omitted
+Caused by: java.sql.SQLNonTransientConnectionException: Connection reset by peer: socket write error
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.handleIoException(AbstractQueryProtocol.java:2090)
+	... 63 common frames omitted
+Caused by: java.net.SocketException: Connection reset by peer: socket write error
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:111)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:155)
+	at org.mariadb.jdbc.internal.io.output.StandardPacketOutputStream.flushBuffer(StandardPacketOutputStream.java:111)
+	at org.mariadb.jdbc.internal.io.output.AbstractPacketOutputStream.flush(AbstractPacketOutputStream.java:186)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:316)
+	... 62 common frames omitted
+24 Aug 2021 - 14:51:52.859 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @657ms to org.eclipse.jetty.util.log.Slf4jLog
+24 Aug 2021 - 14:51:52.953 [main] INFO  io.javalin.Javalin - Static file handler added:
+    {urlPathPrefix: "/", path: "static", location: Location.CLASSPATH}
+    Resolved path: 'file:///C:/Users/david/Documents/workspace-spring-tool-suite-4-4.11.0.RELEASE/Project1/target/classes/static/'
+24 Aug 2021 - 14:51:58.003 [Thread-0] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
+24 Aug 2021 - 14:51:58.003 [Thread-0] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
+24 Aug 2021 - 14:51:58.003 [Thread-0] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#starting-and-stopping
+25 Aug 2021 - 13:03:13.186 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @746ms to org.eclipse.jetty.util.log.Slf4jLog
+25 Aug 2021 - 13:03:13.290 [main] INFO  io.javalin.Javalin - Static file handler added:
+    {urlPathPrefix: "/", path: "static", location: Location.CLASSPATH}
+    Resolved path: 'file:///C:/Users/david/Documents/workspace-spring-tool-suite-4-4.11.0.RELEASE/Project1/target/classes/static/'
+25 Aug 2021 - 13:03:18.373 [Thread-0] INFO  io.javalin.Javalin - It looks like you created a Javalin instance, but you never started it.
+25 Aug 2021 - 13:03:18.374 [Thread-0] INFO  io.javalin.Javalin - Try: Javalin app = Javalin.create().start();
+25 Aug 2021 - 13:03:18.374 [Thread-0] INFO  io.javalin.Javalin - For more help, visit https://javalin.io/documentation#starting-and-stopping
+25 Aug 2021 - 13:35:59.113 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1170ms to org.eclipse.jetty.util.log.Slf4jLog
+25 Aug 2021 - 13:35:59.363 [main] INFO  io.javalin.Javalin - Static file handler added:
+    {urlPathPrefix: "/", path: "static", location: Location.CLASSPATH}
+    Resolved path: 'file:///C:/Users/david/Documents/workspace-spring-tool-suite-4-4.11.0.RELEASE/Project1/target/classes/static/'
+25 Aug 2021 - 13:35:59.482 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+25 Aug 2021 - 13:35:59.484 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+25 Aug 2021 - 13:36:00.391 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7000/
+25 Aug 2021 - 13:36:00.392 [main] INFO  io.javalin.Javalin - Javalin started in 910ms \o/
+25 Aug 2021 - 13:36:08.576 [qtp2014866032-12] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+25 Aug 2021 - 13:36:09.415 [qtp2014866032-12] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+25 Aug 2021 - 13:36:09.628 [qtp2014866032-12] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+25 Aug 2021 - 13:36:09.635 [qtp2014866032-12] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+25 Aug 2021 - 13:36:09.636 [qtp2014866032-12] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+25 Aug 2021 - 13:36:09.636 [qtp2014866032-12] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+25 Aug 2021 - 13:36:09.641 [qtp2014866032-12] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+25 Aug 2021 - 13:36:09.956 [qtp2014866032-12] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+25 Aug 2021 - 13:36:11.331 [qtp2014866032-12] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@7fdf0479] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+25 Aug 2021 - 13:36:11.535 [qtp2014866032-12] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+25 Aug 2021 - 14:22:25.911 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @913ms to org.eclipse.jetty.util.log.Slf4jLog
+25 Aug 2021 - 14:22:26.022 [main] INFO  io.javalin.Javalin - Static file handler added:
+    {urlPathPrefix: "/", path: "static", location: Location.CLASSPATH}
+    Resolved path: 'file:///C:/Users/david/Documents/workspace-spring-tool-suite-4-4.11.0.RELEASE/Project1/target/classes/static/'
+25 Aug 2021 - 14:22:26.110 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+25 Aug 2021 - 14:22:26.116 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+25 Aug 2021 - 14:22:26.633 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7000/
+25 Aug 2021 - 14:22:26.634 [main] INFO  io.javalin.Javalin - Javalin started in 521ms \o/
+25 Aug 2021 - 16:17:51.286 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1156ms to org.eclipse.jetty.util.log.Slf4jLog
+25 Aug 2021 - 16:17:51.433 [main] INFO  io.javalin.Javalin - Static file handler added:
+    {urlPathPrefix: "/", path: "static", location: Location.CLASSPATH}
+    Resolved path: 'file:///C:/Users/david/Documents/workspace-spring-tool-suite-4-4.11.0.RELEASE/Project1/target/classes/static/'
+25 Aug 2021 - 16:17:51.622 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+25 Aug 2021 - 16:17:51.634 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+25 Aug 2021 - 16:17:52.359 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7000/
+25 Aug 2021 - 16:17:52.359 [main] INFO  io.javalin.Javalin - Javalin started in 736ms \o/
+25 Aug 2021 - 16:20:00.160 [qtp2014866032-18] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+25 Aug 2021 - 16:20:01.327 [qtp2014866032-18] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+25 Aug 2021 - 16:20:01.612 [qtp2014866032-18] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+25 Aug 2021 - 16:20:01.626 [qtp2014866032-18] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+25 Aug 2021 - 16:20:01.627 [qtp2014866032-18] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+25 Aug 2021 - 16:20:01.628 [qtp2014866032-18] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+25 Aug 2021 - 16:20:01.632 [qtp2014866032-18] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+25 Aug 2021 - 16:20:02.005 [qtp2014866032-18] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+25 Aug 2021 - 16:20:03.682 [qtp2014866032-18] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2e044838] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+25 Aug 2021 - 16:20:03.880 [qtp2014866032-18] INFO  o.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+25 Aug 2021 - 16:20:03.900 [qtp2014866032-18] WARN  io.javalin.Javalin - Uncaught exception
+org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: wrong column type encountered in column [reimbResolved] in table [reimbursement]; found [varchar (Types#VARCHAR)], but expecting [datetime(6) (Types#TIMESTAMP)]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateColumnType(AbstractSchemaValidator.java:159)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:143)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:42)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:89)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:68)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:200)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:81)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:327)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:728)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:744)
+	at com.revature.util.SessionFactorySingleton.getSessionFactory(SessionFactorySingleton.java:19)
+	at com.revature.dao.UserDAO.getUserByUsernameAndPassword(UserDAO.java:15)
+	at com.revature.service.LoginService.login(LoginService.java:30)
+	at com.revature.controller.LoginController.lambda$0(LoginController.java:27)
+	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:23)
+	at io.javalin.http.JavalinServlet$addHandler$protectedHandler$1.handle(JavalinServlet.kt:128)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:45)
+	at io.javalin.http.JavalinServlet$service$2$1.invoke(JavalinServlet.kt:24)
+	at io.javalin.http.JavalinServlet$service$1.invoke(JavalinServlet.kt:136)
+	at io.javalin.http.JavalinServlet$service$2.invoke(JavalinServlet.kt:40)
+	at io.javalin.http.JavalinServlet.service(JavalinServlet.kt:81)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at io.javalin.websocket.JavalinWsServlet.service(JavalinWsServlet.kt:51)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:799)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:550)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at io.javalin.core.JavalinServer$start$wsAndHttpHandler$1.doHandle(JavalinServer.kt:49)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:501)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1349)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:179)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:388)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:633)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:380)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:137)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.lang.Thread.run(Thread.java:748)
+25 Aug 2021 - 16:21:02.029 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+25 Aug 2021 - 16:21:02.914 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+25 Aug 2021 - 16:21:03.401 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+25 Aug 2021 - 16:21:03.410 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+25 Aug 2021 - 16:21:03.411 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+25 Aug 2021 - 16:21:03.412 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+25 Aug 2021 - 16:21:03.415 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+25 Aug 2021 - 16:21:03.709 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+25 Aug 2021 - 16:21:05.219 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@30feffc] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+25 Aug 2021 - 16:21:05.685 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1813f3e9] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+25 Aug 2021 - 16:21:06.404 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+25 Aug 2021 - 16:21:43.957 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+25 Aug 2021 - 16:21:44.706 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+25 Aug 2021 - 16:21:45.205 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+25 Aug 2021 - 16:21:45.209 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+25 Aug 2021 - 16:21:45.211 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+25 Aug 2021 - 16:21:45.211 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+25 Aug 2021 - 16:21:45.215 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+25 Aug 2021 - 16:21:45.510 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+25 Aug 2021 - 16:21:47.015 [main] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@375b5b7f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+25 Aug 2021 - 16:21:47.201 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+25 Aug 2021 - 16:21:47.522 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+25 Aug 2021 - 16:21:47.522 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - (conn=9127) Duplicate entry 'admin' for key 'UK_fli84f7nj0rk7a0s19x74ueo1'
+25 Aug 2021 - 16:21:53.460 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @921ms to org.eclipse.jetty.util.log.Slf4jLog
+25 Aug 2021 - 16:21:53.585 [main] INFO  io.javalin.Javalin - Static file handler added:
+    {urlPathPrefix: "/", path: "static", location: Location.CLASSPATH}
+    Resolved path: 'file:///C:/Users/david/Documents/workspace-spring-tool-suite-4-4.11.0.RELEASE/Project1/target/classes/static/'
+25 Aug 2021 - 16:21:53.695 [main] INFO  io.javalin.Javalin - 
+           __                      __ _
+          / /____ _ _   __ ____ _ / /(_)____
+     __  / // __ `/| | / // __ `// // // __ \
+    / /_/ // /_/ / | |/ // /_/ // // // / / /
+    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
+
+        https://javalin.io/documentation
+
+25 Aug 2021 - 16:21:53.697 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+25 Aug 2021 - 16:21:54.261 [main] INFO  io.javalin.Javalin - Listening on http://localhost:7000/
+25 Aug 2021 - 16:21:54.261 [main] INFO  io.javalin.Javalin - Javalin started in 565ms \o/
+25 Aug 2021 - 16:22:00.785 [qtp2014866032-19] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.5.6.Final
+25 Aug 2021 - 16:22:01.570 [qtp2014866032-19] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+25 Aug 2021 - 16:22:01.760 [qtp2014866032-19] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+25 Aug 2021 - 16:22:01.768 [qtp2014866032-19] INFO  o.hibernate.orm.connections.pooling - HHH10001005: using driver [org.mariadb.jdbc.Driver] at URL [jdbc:mariadb://database-1.clmvqubh61pa.us-east-2.rds.amazonaws.com:3306/Project1]
+25 Aug 2021 - 16:22:01.769 [qtp2014866032-19] INFO  o.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=admin, password=****}
+25 Aug 2021 - 16:22:01.769 [qtp2014866032-19] INFO  o.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+25 Aug 2021 - 16:22:01.774 [qtp2014866032-19] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+25 Aug 2021 - 16:22:02.088 [qtp2014866032-19] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+25 Aug 2021 - 16:22:03.549 [qtp2014866032-19] INFO  org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5016c7a7] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+25 Aug 2021 - 16:22:03.735 [qtp2014866032-19] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]

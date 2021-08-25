@@ -86,17 +86,19 @@ public class PopulateDataInDatabase {
 		ReimbursementType business = (ReimbursementType) session.createQuery("FROM ReimbursementType s  WHERE s.reimbType = 'business'").getSingleResult();
 		ReimbursementType medical = (ReimbursementType) session.createQuery("FROM ReimbursementType s   WHERE s.reimbType = 'medical'").getSingleResult();
 		
-		Reimbursement reimbursement1 = new Reimbursement(495.66, "time and date", "time and date", "travel to china", 1);
+		Timestamp time = new Timestamp(System.currentTimeMillis());
+		
+		Reimbursement reimbursement1 = new Reimbursement(495.66, time, time, "travel to china", 1);
 		reimbursement1.setReimbAuthor(test);
 		reimbursement1.setReimbStatus(pending);
 		reimbursement1.setType(travel);
 		
-		Reimbursement reimbursement2 = new Reimbursement(65.33,"time and date", "time and date", "diiner for meeting", 1);
+		Reimbursement reimbursement2 = new Reimbursement(65.33,time, time, "diiner for meeting", 1);
 		reimbursement2.setReimbAuthor(test);
 		reimbursement2.setReimbStatus(pending);
 		reimbursement2.setReimbType(business);
 		
-		Reimbursement reimbursement3 = new Reimbursement(5403.66, "time and date", "time and date", "slipped and fell", 1);
+		Reimbursement reimbursement3 = new Reimbursement(5403.66, time, time, "slipped and fell", 1);
 		reimbursement3.setReimbAuthor(test);
 		reimbursement3.setReimbStatus(pending);
 		reimbursement3.setReimbType(medical);
