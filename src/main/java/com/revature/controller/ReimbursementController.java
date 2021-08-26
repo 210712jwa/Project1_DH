@@ -69,57 +69,13 @@ public class ReimbursementController implements Controller {
 		}
 	};
 
-	private Handler getAllReimbursement = (ctx) -> {
-		HttpSession session = ctx.req.getSession();
 
-//		if (session.getAttribute("currentUser") == null) {
-//			ctx.json(new MessageDTO("You need to be logged in to perform this action"));
-//		} else {
-//			User currentUser = (User) session.getAttribute("currentUser");
-//			UserRole userRole = currentUser.getUserRole();
-//
-//			String userId = ctx.pathParam("userId");
-//
-//			if (currentUser.getUserRole() == "admin") {
-//				List<Reimbursement> reimbursements = reimbursementService.addReimbursemntFormBelongingToSpecificUser(userId);
-//
-//				ctx.json(reimbursements);
-//				ctx.status(200);
-//			} else {
-//				ctx.json(new MessageDTO("You are not the user that you want to retrieve all users from"));
-//				ctx.status(401);
-//			}
-//		}
-	};
-
-	private Handler editReimbursemntForm = (ctx) -> {
-HttpSession session = ctx.req.getSession();
-		
-//		if (session.getAttribute("currentUser") == null) {
-//			ctx.json(new MessageDTO("You need to be logged in to perform this action"));
-//		} else {
-//			User currentUser = (User) session.getAttribute("currentUser");
-//			
-//			String userId = ctx.pathParam("userId");
-//			
-//			if (currentUser.getId() == Integer.parseInt(userId)) {
-//				List<Reimbursement> reimbursements = reimbursementService.addReimbursemntFormBelongingToSpecificUser(userId);
-//				
-//				ctx.json(reimbursements);
-//				ctx.status(200);
-//			} else {
-//				ctx.json(new MessageDTO("You are not the user that you want to retrieve all users from"));
-//				ctx.status(401);
-//			}
-//		}
-	};
 
 	@Override
 	public void mapEndpoints(Javalin app) {
-		app.get("/reimbursement", getAllReimbursement);
 		app.get("/user/:userId/reimbursement", getAllReimbursementsBelongingToSpecificUser);
 		app.post("/user/:userId/reimbursement", addReimbursemntFormBelongingToSpecificUser);
-		app.put("/user/:userId/reimbursement", editReimbursemntForm);
+
 
 	}
 

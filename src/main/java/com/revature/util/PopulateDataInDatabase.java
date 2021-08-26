@@ -26,10 +26,10 @@ public class PopulateDataInDatabase {
 		Session session = sf.openSession();
 		Transaction tx = session.beginTransaction();
 		
-		UserRole admin = new UserRole("admin");
-		UserRole user = new UserRole("user");
-		session.persist(admin);
-		session.persist(user);
+		UserRole financeManager = new UserRole("finance manager");
+		UserRole employee = new UserRole("employee");
+		session.persist(financeManager);
+		session.persist(employee);
 		
 		ReimbursementStatus pending = new ReimbursementStatus("pending");
 		ReimbursementStatus approved = new ReimbursementStatus("approved");
@@ -55,11 +55,11 @@ public class PopulateDataInDatabase {
 		Transaction tx = session.beginTransaction();
 		
 		User adminUser1 = new User("username1","password","david", "huynh", "dhuynh@SOInet");
-		UserRole admin = (UserRole) session.createQuery("FROM UserRole ur WHERE ur.role = 'admin'").getSingleResult();
+		UserRole admin = (UserRole) session.createQuery("FROM UserRole ur WHERE ur.role = 'finance manager'").getSingleResult();
 		adminUser1.setUserRole(admin);
 		session.persist(adminUser1);
 		
-		UserRole user = (UserRole) session.createQuery("FROM UserRole ur WHERE role = 'user'").getSingleResult();
+		UserRole user = (UserRole) session.createQuery("FROM UserRole ur WHERE role = 'employee'").getSingleResult();
 		User regularUser1 = new User("username2","password","Tony", "Stark", "TStark@SOI.net");
 		regularUser1.setUserRole(user);
 		

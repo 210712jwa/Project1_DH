@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.revature.dao.ReimbursementDAO;
 import com.revature.dto.AddReimbursementDTO;
+import com.revature.dto.EditReimbursementDTO;
 import com.revature.exception.BadParameterException;
 import com.revature.model.Reimbursement;
 
@@ -34,8 +35,20 @@ public class ReimbursementService {
 	}
 
 	public List<Reimbursement> getAllReimbursements() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		List<Reimbursement> reimbursements = reimbursementDao.getAllReimbursements();
+		
+		return reimbursements;
+	}
+
+	public Reimbursement editReimbursemntForm(String stringUserId, String stringReimbId, EditReimbursementDTO reimbursementToEdit) {
+		int userId = Integer.parseInt(stringUserId);
+		int reimbId = Integer.parseInt(stringReimbId);
+		
+		Reimbursement editedReimbursement = reimbursementDao.editReimbursementForm(userId, reimbId, reimbursementToEdit);
+		
+		
+		return editedReimbursement;
 	}
 
 }

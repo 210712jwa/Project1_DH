@@ -2,9 +2,9 @@ package com.revature.dto;
 
 public class AddReimbursementDTO {
 
-	private double amount;
 	private String discription;
 	private int type;
+	private double amount;
 
 	public AddReimbursementDTO() {
 		super();

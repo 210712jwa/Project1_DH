@@ -8,6 +8,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import com.revature.dto.AddReimbursementDTO;
+import com.revature.dto.EditReimbursementDTO;
 import com.revature.model.Reimbursement;
 import com.revature.model.ReimbursementStatus;
 import com.revature.model.ReimbursementType;
@@ -57,6 +58,36 @@ public class ReimbursementDAO {
 		
 	}
 
+	public List<Reimbursement> getAllReimbursements() {
+		SessionFactory sf = SessionFactorySingleton.getSessionFactory();
+		Session session = sf.openSession();
+		Transaction tx = session.beginTransaction();
+		
+		// Get reimbursements by owner id
+		List<Reimbursement> reimbursements = session.createQuery("SELECT s FROM Reimbursement s").getResultList();
+	
+		tx.commit();
+		session.close();
+		return reimbursements;
+	}
 
+	public Reimbursement editReimbursementForm(int userId, int reimbId, EditReimbursementDTO reimbursement) {
+		SessionFactory sf = SessionFactorySingleton.getSessionFactory();
+		Session session = sf.openSession();
+		Transaction tx = session.beginTransaction();
+		
+		Timestamp resolved = new Timestamp(System.currentTimeMillis());
+
+		Reimbursement editReimbursement = session.get(Reimbursement.class, reimbId);
+
+		editReimbursement.setReimbResolved(resolved);;
+		editReimbursement.setReimbResolver(session.get(User.class, userId));
+		editReimbursement.setReimbStatus(session.get(ReimbursementStatus.class, reimbursement.getStatus()));
+		session.saveOrUpdate(editReimbursement);
+		
+		tx.commit();
+		session.close();
+		return editReimbursement;
+	}
 }
 

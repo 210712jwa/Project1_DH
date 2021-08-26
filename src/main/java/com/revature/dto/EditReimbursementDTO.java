@@ -5,6 +5,27 @@ import java.util.Objects;
 
 public class EditReimbursementDTO {
 
-	private String status;
+	private int status;
+
+	public EditReimbursementDTO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public EditReimbursementDTO(int status) {
+		super();
+		this.status = status;
+	}
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
+	}
+	
+	
+	
 }
 
