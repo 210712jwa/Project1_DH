@@ -44,7 +44,7 @@ public class ReimbursementDAO {
 		addReimbursement.setReimbSubmitted(submitted);
 		
 		addReimbursement.setReimbAuthor(session.get(User.class, id));
-		addReimbursement.setType(session.get(ReimbursementType.class, reimbToAdd.getType()));
+		addReimbursement.setReimbType(session.get(ReimbursementType.class, reimbToAdd.getType()));
 		addReimbursement.setReimbStatus(session.get(ReimbursementStatus.class, 1));
 		addReimbursement.setReimbResolver(null);
 		addReimbursement.setReimbResolver(null);
@@ -71,6 +71,19 @@ public class ReimbursementDAO {
 		return reimbursements;
 	}
 
+	public List<Reimbursement> getAllReimbursementFilteredStatus(int reimbStatusId) {
+		SessionFactory sf = SessionFactorySingleton.getSessionFactory();
+		Session session = sf.openSession();
+		Transaction tx = session.beginTransaction();
+		
+		// Get reimbursements by owner id
+		List<Reimbursement> reimbursements = session.createQuery("SELECT s FROM Reimbursement s JOIN s.reimbStatus u WHERE u.id = :statusId").setParameter("statusId", reimbStatusId).getResultList();
+	
+		tx.commit();
+		session.close();
+		return reimbursements;
+	}
+	
 	public Reimbursement editReimbursementForm(int userId, int reimbId, EditReimbursementDTO reimbursement) {
 		SessionFactory sf = SessionFactorySingleton.getSessionFactory();
 		Session session = sf.openSession();
@@ -79,7 +92,6 @@ public class ReimbursementDAO {
 		Timestamp resolved = new Timestamp(System.currentTimeMillis());
 
 		Reimbursement editReimbursement = session.get(Reimbursement.class, reimbId);
-
 		editReimbursement.setReimbResolved(resolved);;
 		editReimbursement.setReimbResolver(session.get(User.class, userId));
 		editReimbursement.setReimbStatus(session.get(ReimbursementStatus.class, reimbursement.getStatus()));
@@ -89,5 +101,7 @@ public class ReimbursementDAO {
 		session.close();
 		return editReimbursement;
 	}
+
+
 }
 

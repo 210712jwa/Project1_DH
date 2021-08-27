@@ -47,7 +47,7 @@ public class ReimbursementController implements Controller {
 
 	private Handler addReimbursemntFormBelongingToSpecificUser = (ctx) -> {
 		HttpSession session = ctx.req.getSession();
-
+		
 		if (session.getAttribute("currentUser") == null) {
 			ctx.json(new MessageDTO("You need to be logged in to perform this action"));
 		} else {
@@ -75,7 +75,6 @@ public class ReimbursementController implements Controller {
 	public void mapEndpoints(Javalin app) {
 		app.get("/user/:userId/reimbursement", getAllReimbursementsBelongingToSpecificUser);
 		app.post("/user/:userId/reimbursement", addReimbursemntFormBelongingToSpecificUser);
-
 
 	}
 

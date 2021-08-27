@@ -18,7 +18,5 @@ public class AuthorizeService {
 			throw new NotAuthorizedException("You are not authorized to perform this action.");
 		}
 		
-	}
-
-	
+	}	
 }

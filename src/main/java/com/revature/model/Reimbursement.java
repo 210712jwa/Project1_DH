@@ -54,7 +54,7 @@ public class Reimbursement {
 	
 	@ManyToOne
 	@JoinColumn(name = "reimbTypeId")
-	private User reimbType;
+	private ReimbursementType reimbType;
 
 
 	public Reimbursement() {
@@ -63,18 +63,15 @@ public class Reimbursement {
 	}
 
 	public Reimbursement(double reimbAmount, Timestamp reimbSubmitted, Timestamp reimbResolved,
-			String reimbDiscription, int i) {
+			String reimbDiscription, int reimbRecipe) {
 		super();
 		this.reimbAmount = reimbAmount;
 		this.reimbSubmitted = reimbSubmitted;
 		this.reimbResolved = reimbResolved;
 		this.reimbDiscription = reimbDiscription;
-		this.reimbRecipe = i;
+		this.reimbRecipe = reimbRecipe;
 	}
 
-	public Reimbursement(double d, long currentTimeMillis, long currentTimeMillis2, String string, int i) {
-		// TODO Auto-generated constructor stub
-	}
 
 	public int getId() {
 		return id;
@@ -148,12 +145,12 @@ public class Reimbursement {
 		this.reimbStatus = pending;
 	}
 
-	public User getReimbType() {
+	public ReimbursementType getReimbType() {
 		return reimbType;
 	}
 
-	public void setReimbType(User reimbType) {
-		this.reimbType = reimbType;
+	public void setReimbType(ReimbursementType reimbursementType) {
+		this.reimbType = reimbursementType;
 	}
 
 
@@ -188,22 +185,7 @@ public class Reimbursement {
 				&& Objects.equals(reimbSubmitted, other.reimbSubmitted) && Objects.equals(reimbType, other.reimbType);
 	}
 
-	public void setReimbStatus(User test123) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	public void setType(ReimbursementType travel) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-
-	public void setReimbType(ReimbursementType business) {
-		// TODO Auto-generated method stub
-		
-	}
 	
 	
 }

@@ -25,6 +25,18 @@ public class FinanceController implements Controller {
 		this.authService = new AuthorizeService();
 	}
 
+	private Handler getAllReimbursementFiltered = (ctx) -> {
+		HttpSession session = ctx.req.getSession();
+		authService.guard(ctx);
+		
+		String reimbStatusId = ctx.pathParam("reimbStatusId");
+
+		List<Reimbursement> reimbursements = reimbursementService.getAllReimbursementFiltered(reimbStatusId);
+
+				ctx.json(reimbursements);
+				ctx.status(200);
+	};
+	
 	private Handler getAllReimbursement = (ctx) -> {
 		HttpSession session = ctx.req.getSession();
 		
@@ -53,6 +65,7 @@ public class FinanceController implements Controller {
 	@Override
 	public void mapEndpoints(Javalin app) {
 		app.get("/reimbursement", getAllReimbursement);
+		app.get("/reimbursement/:reimbStatusId", getAllReimbursementFiltered);
 		app.put("/user/:userId/reimbursement/:reimbId", editReimbursemntFromSpecificUser);
 
 

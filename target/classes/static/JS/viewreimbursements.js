@@ -1,6 +1,6 @@
 
 function onLoad(event) {
-    fetch('http://localhost:7000/currentuser', {
+    fetch(' http://localhost:7000/currentuser', {
         'credentials': 'include',
         'method': 'GET'
     }).then((response) => {
@@ -24,7 +24,9 @@ function onLoad(event) {
 function populateReimbursements(reimbursementArray) {
     let tbody = document.querySelector('#reimbursement tbody');
 
-    for (const reimbursement of reimbursementArray) {
+    for (const reimbursement of
+        
+        reimbursementArray) {
 
 
         let tr = document.createElement('tr');
@@ -33,30 +35,38 @@ function populateReimbursements(reimbursementArray) {
         reimbursementIdTd.innerHTML = reimbursement.id;
 
         let reimbursementAmountTd = document.createElement('td');
-        reimbursementAmountTd.innerHTML = reimbursement.name;
+        reimbursementAmountTd.innerHTML = reimbursement.reimbAmount;
 
         let reimbursementTypeTd = document.createElement('td');
-        reimbursementTypeTd.innerHTML = reimbursement.age;
+        reimbursementTypeTd.innerHTML = null; //reimbursement.reimbType.reimbType;
 
-        let reimbursementAuthorFirstNameTd = document.createElement('td');
-        reimbursementAuthorFirstNameTd.innerHTML = reimbursement.author.lName;
+        let reimbursementAuthorIdTd = document.createElement('td');
+        reimbursementAuthorIdTd.innerHTML = reimbursement.reimbAuthor.fName + " " + reimbursement.reimbAuthor.lName;
 
-        let reimbursementAuthorLastNameTd = document.createElement('td');
-        reimbursementAuthorLastNameTd.innerHTML = reimbursement.author.lName;
+        let reimbursementDiscriptionTd = document.createElement('td');
+        reimbursementDiscriptionTd.innerHTML = reimbursement.reimbDiscription;
 
         let reimbursementAuthorEmailTd = document.createElement('td');
-        reimbursementAuthorEmailTd.innerHTML = reimbursement.email;
+        reimbursementAuthorEmailTd.innerHTML = null; //reimbursement.reimbRecipe;
 
         let reimbursementStatusTd = document.createElement('td');
-        reimbursementStatusTd.innerHTML = reimbursement.status.status;
+        reimbursementStatusTd.innerHTML = null; // reimbursement.reimbStatus.reimbStatus;
+
+        let reimbursementSubmittedTd = document.createElement('td');
+        reimbursementSubmittedTd.innerHTML = null; //new Date(reimbursement.reimbuSubmitted);
+
+        let reimbursementResolverTd = document.createElement('td');
+        reimbursementResolverTd.innerHTML = null; //new Date(reimbursement.reimbResolved);
 
         tr.appendChild( reimbursementIdTd);
         tr.appendChild( reimbursementAmountTd);
         tr.appendChild( reimbursementTypeTd);
-        tr.appendChild( reimbursementAuthorFirstNameTd);
-        tr.appendChild( reimbursementAuthorLastNameTd);
+        tr.appendChild( reimbursementAuthorIdTd);
+        tr.appendChild( reimbursementDiscriptionTd);
+        tr.appendChild( reimbursementAuthorEmailTd);
         tr.appendChild( reimbursementStatusTd);
-
+        tr.appendChild( reimbursementSubmittedTd);
+        tr.appendChild( reimbursementResolverTd);
         tbody.appendChild(tr);
     }
 }

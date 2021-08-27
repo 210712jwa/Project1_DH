@@ -51,4 +51,12 @@ public class ReimbursementService {
 		return editedReimbursement;
 	}
 
+	public List<Reimbursement> getAllReimbursementFiltered(String stringReimbStatusId) {
+		int reimbStatusId = Integer.parseInt(stringReimbStatusId);
+		
+		List<Reimbursement> reimbursements = reimbursementDao.getAllReimbursementFilteredStatus(reimbStatusId);
+		
+		return reimbursements;
+	}
+
 }
