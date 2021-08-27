@@ -1,3 +1,5 @@
+let filterButton = document.getElementById('filter');
+let typeInput = document.getElementById('status');
 
 function onLoad(event) {
     fetch(' http://localhost:7000/currentuser', {
@@ -81,7 +83,39 @@ function populateReimbursements(reimbursementArray) {
         
         tbody.appendChild(tr);
     }
+
+    function filterReimbursements(event) {
+        if (typeInput.value === "all") {
+            cleardata();
+            checkIfUserCurrentlyLoggedIn();
+        } else {
+            const typeInfo = {
+                "reimType": typeInput
+            }
+            fetch('http://127.0.0.1:7000/currentuser', {
+                'credentials': 'include',
+                'method': 'GET'
+            }).then((response) => {
+                if (response.status === 401) {
+                    window.location.href = 'index.html'
+                } else if (response.status === 200) {
+                    return response.json();
+                }
+            }).then((user) => {
+                return fetch(`http://127.0.0.1:7000/reimbursement/${typeInput.value}`, {
+                    'method': 'GET',
+                    'credentials': 'include'
+                });
+            }).then((response) => {
+                return response.json()
+            }).then((reimbs) => {
+                cleardata();
+                populateReimbursements(reimbs);
+            })
+        }
+    }
 }
 
-// filterButton.addEventListener('click', login);
 window.addEventListener('load', onLoad)
+filterButton.addEventListener('click', filterReimbursements)
+

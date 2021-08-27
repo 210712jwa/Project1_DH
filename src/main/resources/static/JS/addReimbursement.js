@@ -21,7 +21,7 @@ function submit(event) {
             alert("about to adding reimburesment record");
             return response.json();
         } else if (response.status === 401) {
-            window.location.href = 'mainPage.html';
+           // window.location.href = 'mainPage.html';
         }
     }).then((user) => {
         return fetch(`http://localhost:7000/user/${user.id}/reimbursement`, {
