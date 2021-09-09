@@ -15,8 +15,8 @@ Javalin
 
 Features:
 
-Add a reimbursement
-edit a reimbursement
-ability to view/filter through reimbursements
+Add a reimbursement,
+edit a reimbursement,
+ability to view/filter through reimbursements,
 ability to log in
 
